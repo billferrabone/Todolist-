@@ -46,8 +46,8 @@ const Home = () => {
 			/>
 			{/* <div id="emailHelp" className="form-text"></div> */}
 		</div>
-			<div className="list-group-item list-group-item-action">
-			{lista.map((item,index)=><li key={index}>{item}<span onClick={() => borrar(item)}>         X</span></li>)}
+			<div className="list-group">
+			{lista.map((item,index)=><div className="list-group-item list-group-item-action"><li key={index}>{item}<span onClick={() => borrar(item)}>         X</span></li></div>)}
 			</div>	
 			
 		
