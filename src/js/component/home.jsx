@@ -31,13 +31,13 @@ const Home = () => {
 		// 	value={tarea}
 		// 	/>
 		// 	</a>
-		// <a href="#" className="list-group-item list-group-item-action">	{lista.map((item)=><li>{item}</li>)}</a>
-		// </div>
+		// <a href="#" className="list-gro">	{lista.map((item)=><li>{item}</li>)}</a>
+		// </div>up-item list-group-item-action
 
 		<div className="text-center">
 			<h1 className="text-center mt-5">ToDo List</h1>
 		<form className="list-group" onSubmit={submit}>
-		<div className="mb-3">
+		<div className="list-group-item list-group-item-action">
 			<label htmlFor="exampleInputEmail1" className="form-label"></label>
 			<input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="What needs to be done?"
 			onChange={(e)=>setTarea(e.target.value)}
@@ -46,8 +46,10 @@ const Home = () => {
 			/>
 			{/* <div id="emailHelp" className="form-text"></div> */}
 		</div>
-		
-			{lista.map((item,index)=><li key={index}>{item}<span onClick={() => borrar(item)}>   X</span></li>)}
+			<div className="list-group-item list-group-item-action">
+			{lista.map((item,index)=><li key={index}>{item}<span onClick={() => borrar(item)}>         X</span></li>)}
+			</div>	
+			
 		
 		</form>
 		</div>
