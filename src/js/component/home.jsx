@@ -39,18 +39,15 @@ const Home = () => {
 		<form className="list-group" onSubmit={submit}>
 		<div className="list-group-item list-group-item-action">
 			<label htmlFor="exampleInputEmail1" className="form-label"></label>
-			<input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="What needs to be done?"
+			<input type="text"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="What needs to be done?"
 			onChange={(e)=>setTarea(e.target.value)}
-			// onKeyPress={(e)=>setTarea(e.target.value)}
 			value={tarea}
 			/>
-			{/* <div id="emailHelp" className="form-text"></div> */}
 		</div>
 			<div className="list-group">
-			{lista.map((item,index)=><div className="list-group-item list-group-item-action"><li key={index}>{item}<span onClick={() => borrar(item)}>         X</span></li></div>)}
+			{lista.map((item,index)=><div className="list-group-item list-group-item-action"><li key={index}>{item}<span onClick={() => borrar(item)}>  X</span></li></div>)}
 			</div>	
-			
-		
+				
 		</form>
 		</div>
 	);
