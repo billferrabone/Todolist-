@@ -22,18 +22,6 @@ const Home = () => {
 		console.log(lista);
 
 	return (
-		// <div className="list-group">
-		// <div className="text-center">
-		// 	<h1 className="text-center mt-5">ToDo List</h1>
-		// </div>
-		// <a href="#" className="list-group-item list-group-item-action"><input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="What needs to be done?"
-		// 	onChange={(e)=>setTarea(e.target.value)}
-		// 	value={tarea}
-		// 	/>
-		// 	</a>
-		// <a href="#" className="list-gro">	{lista.map((item)=><li>{item}</li>)}</a>
-		// </div>up-item list-group-item-action
-
 		<div className="container text-center w-50">
 			<h1 className="text-center mt-5">ToDo List</h1>
 		<form className="list-group" onSubmit={submit}>
@@ -45,7 +33,7 @@ const Home = () => {
 			/>
 		</div>
 			<div className="list-group">
-			{lista.map((item,index)=><div className="list-group-item list-group-item-action"><li key={index}>{item}<span className= "float-end" onClick={() => borrar(item)}>  X</span></li></div>)}
+			{lista.map((item,index)=><div className="list-group-item list-group-item-action"><li key={index}>{item}<button className= "btn-outline btn-primary float-end" onClick={() => borrar(item)}>  X</button></li></div>)}
 			</div>	
 				
 		</form>
