@@ -24,11 +24,11 @@ const Home = () => {
 
 	return (
 		<div className="container text-center w-50">
-			<h1 className="text-center mt-5">ToDo List</h1>
+			<h1 className="text-center mt-5">Lista de tareas</h1>
 		<form className="list-group" onSubmit={submit}>
 		<div className="list-group-item list-group-item-action">
 			<label htmlFor="exampleInputEmail1" className="form-label"></label>
-			<input type="text"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="What needs to be done?"
+			<input type="text"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="¿Que se necesita hacer?"
 			onChange={(e)=>setTarea(e.target.value)}
 			value={tarea}
 			/>
@@ -38,7 +38,7 @@ const Home = () => {
 			</div>	
 				
 		</form>
-		<div>Te faltan por realizar {tareasPendientes} tareas</div>
+		<div>{tareasPendientes === 0 ? (<p> No hay tareas, añadir tareas </p>):(<p>{tareasPendientes} tareas en la lista</p>)}</div>
 		</div>
 	);
 };
