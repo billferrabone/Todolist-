@@ -34,7 +34,7 @@ const Home = () => {
 		// <a href="#" className="list-gro">	{lista.map((item)=><li>{item}</li>)}</a>
 		// </div>up-item list-group-item-action
 
-		<div className="text-center">
+		<div className="container text-center w-50">
 			<h1 className="text-center mt-5">ToDo List</h1>
 		<form className="list-group" onSubmit={submit}>
 		<div className="list-group-item list-group-item-action">
@@ -45,7 +45,7 @@ const Home = () => {
 			/>
 		</div>
 			<div className="list-group">
-			{lista.map((item,index)=><div className="list-group-item list-group-item-action"><li key={index}>{item}<span onClick={() => borrar(item)}>  X</span></li></div>)}
+			{lista.map((item,index)=><div className="list-group-item list-group-item-action"><li key={index}>{item}<span className= "float-end" onClick={() => borrar(item)}>  X</span></li></div>)}
 			</div>	
 				
 		</form>
