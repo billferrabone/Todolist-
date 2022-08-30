@@ -6,6 +6,7 @@ const Home = () => {
 
 	const [tarea, setTarea] = useState(""); // 2. lo ejecuto	
 	const [lista, setLista] = useState([])
+	let tareasPendientes = lista.length
 	function submit(e) {
 		e.preventDefault()
 		console.log(tarea);
@@ -33,10 +34,11 @@ const Home = () => {
 			/>
 		</div>
 			<div className="list-group">
-			{lista.map((item,index)=><div className="list-group-item list-group-item-action"><li key={index}>{item}<button className= "btn-outline btn-primary float-end" onClick={() => borrar(item)}>  X</button></li></div>)}
+			{lista.map((item,index)=><div className="list-group-item list-group-item-action"><li key={index}>{item}<span className= "float-end" onClick={() => borrar(item)}>  X</span></li></div>)}
 			</div>	
 				
 		</form>
+		<div>Te faltan por realizar {tareasPendientes} tareas</div>
 		</div>
 	);
 };
